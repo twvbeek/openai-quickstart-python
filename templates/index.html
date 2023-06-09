@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <head>
-  <title>OpenAI Quickstart</title>
+  <title>Job Ad Generator</title>
   <link
     rel="shortcut icon"
-    href="{{ url_for('static', filename='dog.png') }}"
+    href="{{ url_for('static', filename='job.png') }}"
   />
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
 </head>
 
 <body>
-  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
-  <h3>Name my pet</h3>
+  <img src="{{ url_for('static', filename='job.png') }}" class="icon" />
+  <h3>Job Ad Generator</h3>
   <form action="/" method="post">
-    <input type="text" name="animal" placeholder="Enter an animal" required />
-    <input type="submit" value="Generate names" />
+    <input type="text" name="job_title" placeholder="Job Title" required />
+    <input type="text" name="keyword1" placeholder="Keyword 1" required />
+    <input type="text" name="keyword2" placeholder="Keyword 2" required />
+    <input type="submit" value="Generate Job Ad" />
   </form>
   {% if result %}
   <div class="result">{{ result }}</div>
