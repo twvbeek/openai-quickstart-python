@@ -1,7 +1,7 @@
 import openai
 
 # Set your OpenAI API key
-openai.api_key = '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'
+openai.api_key = 'key'
 
 def generate_job_ad(job_name, context_field1, context_field2):
     # Step 1: Get information from external tool using API call
